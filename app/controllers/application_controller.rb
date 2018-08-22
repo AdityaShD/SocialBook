@@ -19,4 +19,7 @@ class ApplicationController < ActionController::Base
 		return render json: data, status: 401
   	end
   end
+
+
+  
 end

@@ -5,7 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
+gem 'bulma-rails', '~> 0.7.1'
+gem 'simple_form', '~> 3.5'
 
 gem 'resque'
 
@@ -51,6 +52,9 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+    gem 'better_errors' , '~> 2.4'
+  gem 'guard' , '~> 2.14' , '>= 2.14.1'
+  gem 'guard-livereload' , '~> 2.5' , '>= 2.5.2'
 end
 
 group :development do
@@ -64,3 +68,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+
