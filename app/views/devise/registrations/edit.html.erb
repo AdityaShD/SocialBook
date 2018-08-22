@@ -43,15 +43,15 @@
             </div>
         </div>
 
-          <strong><div><%= f.label :date_of_birth,required: true %><br>
-        <%= f.date_select :date_of_birth %></div>
-        <br>
+           <strong><div><%= f.label :birthday, required: true %><br>
+        <%= f.date_field :dob, autofocus: true %></div>
+        <br>        
 
             <div><%= f.check_box :is_female, {}, true %> <strong><%= f.label :is_female, "Female" %> </strong>
     <%= f.check_box :is_female, {}, false %><strong><%= f.label :is_female, "Male" %> </strong></div>
     <br>
 
-        <%= f.button :submit, "Update", class:"button is-warning" %>
+        <%= f.button :submit, "Update", class:"button is-link" %>
 
       <% end %>
 
