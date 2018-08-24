@@ -2,6 +2,7 @@ require 'resque/server'
 
 Rails.application.routes.draw do
 
+  devise_for :controllers
   mount Resque::Server.new, at: "/resque"
   
   namespace :api do
