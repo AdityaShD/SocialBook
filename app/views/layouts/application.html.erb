@@ -31,7 +31,10 @@
   		<div class='auth-info-links'>
   			<% if user_signed_in? %>
          
-              
+              <figure class="image is-128x128" >
+                
+                <%= link_to image_tag(current_user.avatar,border:0 , :class => "profile-page") , profile_path(current_user.id)   %>
+              </figure>
 
               <div class="navbar-item has-dropdown is-hoverable">
                 <div class="acc"><%= link_to 'Account', edit_user_registration_path, class: "navbar-link" %>

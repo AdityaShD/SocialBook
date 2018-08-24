@@ -22,7 +22,7 @@ Rails.application.routes.draw do
 
 
 
-  get 'users/profile/:id', to: 'users#profile'
+  get 'users/profile/:id', to: 'users#profile' , as: :profile 
   get 'users/search', to: 'users#search'
  
 
