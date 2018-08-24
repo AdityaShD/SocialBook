@@ -6,13 +6,13 @@
 
 
   <img class="user-avatar" src="<%= @user.avatar %>">
-  <%= form_for @user, url: user_avatar_upload_path(@user.id), html: { multipart: true }, method: :post do |form| %>
 
+  <%= form_for @user, url: user_avatar_upload_path(@user.id), html: { multipart: true }, method: :post do |form| %>
 
     <%= form.file_field :avatar %>
 
     <%= form.submit class:"button is-info"%>
-    
+
   <% end %>
   <div class="info">
 <p><%= @user.name %></p>
@@ -35,6 +35,47 @@
   </p>
 
   </div>
+
+
+</div>
+
+
+
+<div >
+  <ul id="posts-list" class="posts-list">
+    <% post=@user.posts %>
+
+    <% post.reverse.each do |post| %>
+      <!--  -->
+      <li id="post-<%= post.id %>" class="wow animated fadeInUp">
+        <div>
+
+          <p><%= post.content %></p>
+          <p><%= post.user.email %></p>
+          <% if user_signed_in? && post.user_id ==  current_user.id %>
+            <p><%= link_to "Delete", destroy_post_path(post.id), method: :delete, remote: true %></p>
+          <% end %>
+
+          <% if user_signed_in? %>
+            <p>
+              <sub id="post-<%= post.id %>-likes" class="post-like-status">
+                <%= render 'posts/post_like_link', post: post %>
+              </sub>
+            </p>
+          <% else %>
+            <sub>
+              <%= post.likes.length %> Likes
+
+            </sub>
+
+          <% end %>
+
+        
+
+        </div>
+      </li>
+    <% end %>
+  </ul>
 
 
 </div>
