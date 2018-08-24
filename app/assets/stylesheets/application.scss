@@ -21,16 +21,27 @@
 
 body{
 	margin: 0;
-
+	
+	
+	
 	#common-header{
 		display: flex;
 		justify-content: space-around;
 		box-shadow: 1px 1px 1px 1px lightgrey;
+		background: url(https://www.jetchill.com/wp-content/uploads/2017/05/blog-header-background.jpg);
 
-
+		#website-name{
+			color:black;
+			font-size: 30px;
+			font-style: oblique;
+		}
 		.logo{
 			width: 40%;
 			text-align: left;
+		}
+		.website-logo{
+			width: 45px;
+			border-radius: 20px;
 		}
 
 		.auth-info-links{

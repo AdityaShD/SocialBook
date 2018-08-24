@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     end
 
     namespace :v2 do
-       get 'home', to: 'posts#home'
+       get 'home', to: 'posts#home' 
 
     end
 
@@ -35,7 +35,7 @@ Rails.application.routes.draw do
   delete 'comments/:id', to: 'comments#destroy', as: :destroy_comment
 
 	# Post routes
-  root 'posts#home'
+  root 'posts#home' , as: :home
   get 'posts/home', to: 'posts#home'
   post 'posts/create', as: :posts
   delete 'posts/:id', to: 'posts#destroy', as: :destroy_post

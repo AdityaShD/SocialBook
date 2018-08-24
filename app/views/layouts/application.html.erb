@@ -22,14 +22,18 @@
 
   </head>
 
-  <body>
-  	<div id="common-header">
-  		<div class='logo animated bounce infinite'>
-  			<img width="45" src="https://image.freepik.com/free-icon/reddit-logo_318-67806.jpg">
-  		</div>
+ <header>
+      <div id="common-header">
+      <div class='logo animated bounce infinite'>
+        <%= link_to image_tag( "https://image.freepik.com/free-icon/reddit-logo_318-67806.jpg" ,border:0, :class => "website-logo") , home_path %>
+      </div>
 
-  		<div class='auth-info-links'>
-  			<% if user_signed_in? %>
+      <div id = "website-name">
+        Social Book
+      </div>
+
+      <div class='auth-info-links'>
+        <% if user_signed_in? %>
          
               <figure class="image is-128x128" >
                 
@@ -50,9 +54,13 @@
             <%= link_to "Sign up", new_user_registration_path, class:"navbar-item button is-primary"%>
 
             <% end %>
-  		</div>
-  	</div>
+      </div>
+    </div>
 
+ </header>
+  <body >
+
+ 
 
     <%= yield %>
 

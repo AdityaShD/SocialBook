@@ -16,6 +16,9 @@
 		border-left: 1px dashed #007effe0;
 
 		.new-post-form{
+			border: solid;
+			border-color: cyan;
+			margin-bottom: 50px;
 			display: flex;
 			justify-content: center;
 			form{
@@ -34,10 +37,18 @@
 						color: green;
 					}
 				}
+
 				
-			}
 			
+			}
+	.comment-section.make-comment{
+	border-radius: 20px;
+}			
+
 		}
+		
+		
+		
 	}
 
 	@media (min-width: 340px) and (max-width: 480px)and (orientation: portrait) {
