@@ -38,12 +38,23 @@
 					}
 				}
 
-				
 			
 			}
-	.comment-section.make-comment{
-	border-radius: 20px;
-}			
+			#comment_content{
+				border-radius: 25px;
+			}		
+			.is-info:hover{
+				.is-success{}
+			}
+			.delete-link{
+			color: blue;
+			}
+			.delete-link:hover{
+			color: hotpink;
+			}	
+
+
+
 
 		}
 		

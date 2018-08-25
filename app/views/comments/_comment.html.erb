@@ -3,7 +3,7 @@
 		<sub><%= comment.user.email %></sub>
 	</p>
 	<% if user_signed_in? && comment.user_id ==  current_user.id %>
-		<p><%= link_to "Delete", destroy_comment_path(comment.id), method: :delete %></p>
+		<p><%= link_to "Delete", destroy_comment_path(comment.id), method: :delete , :class => "delete-link" %></p>
 		<% end %>
 
 </li>

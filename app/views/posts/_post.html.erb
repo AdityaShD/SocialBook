@@ -4,7 +4,7 @@
 		<p><%= post.content %></p>
 		<p><%= post.user.email %></p>
 		<% if user_signed_in? && post.user_id ==  current_user.id %>
-		<p><%= link_to "Delete", destroy_post_path(post.id), method: :delete, remote: true %></p>
+		<p><%= link_to "Delete", destroy_post_path(post.id), method: :delete, remote: true , :class => "delete-link" %></p>
 		<% end %>
 
 		<% if user_signed_in? %>
