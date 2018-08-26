@@ -1,0 +1,2 @@
+class OmnicontrollerController < ApplicationController
+end

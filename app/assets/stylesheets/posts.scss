@@ -16,8 +16,8 @@
 		border-left: 1px dashed #007effe0;
 
 		.new-post-form{
-			border: solid;
-			border-color: cyan;
+			
+			border-radius: 25px;
 			margin-bottom: 50px;
 			display: flex;
 			justify-content: center;
@@ -27,19 +27,25 @@
 			}
 			
 		}
+		.posts-block {
+			background: white;
+			margin-bottom: 25px;
+			border-radius: 25px;
+
+
+		}
 
 		.posts-list{
 
-			.post-like-status {
-				a{
+			a{
 					i{
 						font-size: 1.5rem;
 						color: green;
 					}
-				}
+			}
 
 			
-			}
+
 			#comment_content{
 				border-radius: 25px;
 			}		

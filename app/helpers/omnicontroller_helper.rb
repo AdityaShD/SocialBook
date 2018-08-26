@@ -1,0 +1,2 @@
+module OmnicontrollerHelper
+end
