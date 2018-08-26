@@ -16,7 +16,7 @@ class CommentsController < ApplicationController
 
     Resque.enqueue(NewCommentEmailWorker, @new_comment.id)
 
-    # redirect_to root_path
+    redirect_to root_path
 
   end
 

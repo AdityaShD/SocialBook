@@ -35,7 +35,7 @@ Rails.application.routes.draw do
   delete 'comments/:id', to: 'comments#destroy', as: :destroy_comment
 
 	# Post routes
-  root 'posts#home' , as: :home
+  root 'posts#home' 
   get 'posts/home', to: 'posts#home'
   post 'posts/create', as: :posts
   delete 'posts/:id', to: 'posts#destroy', as: :destroy_post
