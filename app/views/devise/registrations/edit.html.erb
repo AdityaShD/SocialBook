@@ -4,6 +4,14 @@
       <div class="column is-4">
 
       <h2 class="title is-2">Edit <%= resource_name.to_s.humanize %></h2>
+        <img class="user-avatar" src="<%= @user.avatar %>" style="width: 573px;height: auto">
+        <%= form_for @user, url: user_avatar_upload_path(@user.id), html: { multipart: true }, method: :post do |form| %>
+
+          <%= form.file_field :avatar %>
+
+          <%= form.submit class:"button is-info"%>
+
+        <% end %>
 
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
         <%= f.error_notification %>
