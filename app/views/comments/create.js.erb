@@ -7,3 +7,10 @@ var newCommentHTML = $("<%= escape_javascript render 'comments/comment', comment
 commentsListContainer.prepend(newCommentHTML);
 
 
+new Noty({
+    text: 'Someone just Commented!',
+    theme: 'relax',
+    type: 'warning',
+    layout: 'topRight',
+    timeout: 1000,
+}).show();
