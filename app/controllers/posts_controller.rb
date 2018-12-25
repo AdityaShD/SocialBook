@@ -45,7 +45,7 @@ class PostsController < ApplicationController
 
   def destroy
     @post_id = @post.id
-	@post.destroy
+	  @post.destroy
 
   	# redirect_to action: "home"
   end
